@@ -1,0 +1,22 @@
+tikets = int(input('Введите количество билетов, которое хотите приобрести: '))
+summ = 0 #общая стоимость билетов
+count = 0 #количество билетов, учитываемых для расчета скидки
+
+for i in range(tikets):
+  age = [int(input('Введите возврат посетитлей: '))]
+  for a in age:
+    if 18 <= a < 25:
+      summ += 990
+      count = count + 1
+    elif a >= 25:
+      summ += 1390
+      count = count + 1
+    else:
+      summ += 0
+  
+if count > 3:
+  summ = summ * 0.90
+else:
+  summ
+
+print(f'Стоимость билетов: {summ}')
